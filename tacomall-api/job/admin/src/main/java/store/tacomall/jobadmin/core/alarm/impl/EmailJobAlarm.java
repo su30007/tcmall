@@ -82,5 +82,18 @@ public class EmailJobAlarm implements JobAlarm {
 
         return alarmResult;
     }
+    
+    /**
+     * load email job alarm template
+     *
+     * @return
+     */
+    private final String loadEmailJobAlarmTemplate(){
+        String mailBodyTemplate = "<h5>" + I18nUtil.getString("jobconf_monitor_detail") + "：</span>" +
+                "<table border=\"1\" cellpadding=\"3\" style=\"border-collapse:collapse; width:80%;\" >\n" +
+                // todo 
+                "</table>";
 
+        return mailBodyTemplate;
+    }
 }
